@@ -1,0 +1,7 @@
+<div class="flex justify-center bg-slate-950 p-4">
+    <div class="flex w-full">
+      <div class="flex items-center">
+        <div class="text-white uppercase ml-8 hover:cursor-pointer hover:text-sky-400" *ngFor="let item of menuList" (click)="navigateTo(item)">{{item.title}}</div>
+      </div>
+    </div>
+</div>

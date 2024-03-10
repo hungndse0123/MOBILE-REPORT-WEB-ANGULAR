@@ -1,0 +1,28 @@
+<div class="h-full border-2 border-white rounded-lg p-10 bg-slate-800">
+    <div class="flex flex-auto flex-col">
+        <div class="flex">
+            <label class="text-2xl font-bold text-white mb-5">Product Rating Distribution Statistic</label>
+            <div class="flex ml-auto gap-1">
+                <div class="flex flex-col">
+                    <label class="text-xs text-stone-300">Category</label>
+                    <select class="rounded-lg p-2" [ngModel]="selectedProductCondition"
+                        (ngModelChange)="onSelectedCategoryConditionChange($event)">
+                        <option value="">All</option>
+                        <option *ngFor="let item of dropdownList" [value]="item">
+                            {{item}}
+                        </option>
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-xs text-stone-300">Min Price</label>
+                    <input class="w-full rounded-lg p-2" type="number" placeholder="Type price here"
+                    [ngModel]="minPriceCondition" (ngModelChange)="onMinPriceConditionChange($event)">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-1/2 self-center">
+            <canvas id="Product"></canvas>
+        </div>
+    </div>
+</div>

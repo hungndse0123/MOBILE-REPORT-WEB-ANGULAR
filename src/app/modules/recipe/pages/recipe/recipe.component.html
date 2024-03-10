@@ -1,0 +1,38 @@
+<div class="h-full border-2 border-white rounded-lg p-10 bg-slate-800">
+    <div class="flex flex-auto flex-col">
+        <div class="flex">
+            <label class="text-2xl font-bold text-white mb-5">Recipe Difficulty Distribution Statistic</label>
+            <!-- <div class="flex flex-col ml-auto">
+                <label class="text-xs text-stone-300">Tag</label>
+                <select class="mb-5 rounded-lg p-2" [ngModel]="selectedRecipeCondition"
+                    (ngModelChange)="onSelectedTagConditionChange($event)">
+                    <option value="">All</option>
+                    <option *ngFor="let item of dropdownList" [value]="item">
+                        {{item}}
+                    </option>
+                </select>
+            </div> -->
+            <div class="flex ml-auto gap-1">
+                <div class="flex flex-col">
+                    <label class="text-xs text-stone-300">Tag</label>
+                    <select class="mb-5 rounded-lg p-2" [ngModel]="selectedRecipeCondition"
+                        (ngModelChange)="onSelectedTagConditionChange($event)">
+                        <option value="">All</option>
+                        <option *ngFor="let item of dropdownList" [value]="item">
+                            {{item}}
+                        </option>
+                    </select>
+                </div>
+                <div class="flex flex-col">
+                    <label class="text-xs text-stone-300">Min Calories per Serving</label>
+                    <input class="w-full rounded-lg p-2" type="number" placeholder="Type number here"
+                        [ngModel]="minCaloriesCondition" (ngModelChange)="onMinCaloriesConditionChange($event)">
+                </div>
+            </div>
+        </div>
+
+        <div class="w-1/2 self-center">
+            <canvas id="Recipe"></canvas>
+        </div>
+    </div>
+</div>
